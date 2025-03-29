@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,65 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+
+.Header {
+  font-size: 70px;
+  color: white;
+  background-color: rgb(78, 113, 78);
+  box-shadow: 0px 10px 10px gray;
+  height: 10vh;
+  width: 100%;
+  text-align: center;
+  /* line-height: 8vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin: 2vh;
+}
+
+
+.Posts {
+  margin: 2vh;
+}
+
+.Post {
+  margin: 1vh;
+  padding: 2vh;
+  border: solid 5px gray;
+}
+
+.SideMenu {
+  margin: 3vh;
+  border: solid 5px gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 250px;
+}
+
+.TagButton {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  background-color: rgba(98, 17, 98, 0.902);
+  color: white;
+  text-align: center;
+  box-shadow: 0px 10px 10px gray;
+  cursor: pointer;
+  border: none;
+  transition-duration: 0.4s;
+}
+
+.TagButton:hover {
+  background-color: rgb(57, 0, 57);
 }
