@@ -1,9 +1,19 @@
 export default function SideMenu() {
   return (
     <div className="SideMenu">
-      <TagButton />
-      <TagButton />
-      <TagButton />
+      <TagButton title="Ekko">
+        <img
+          src="https://static.bigbrain.gg/assets/lol/riot_static/15.6.1/img/champion/Ekko.webp"
+          alt=""
+        ></img>
+      </TagButton>
+      <TagButton title="Master yi">
+        <img
+          src="https://static.bigbrain.gg/assets/lol/riot_static/15.6.1/img/champion/MasterYi.webp"
+          alt=""
+        ></img>
+      </TagButton>
+      <TagButton title="LeBlanc" />
       <TagButton />
       <TagButton />
       <TagButton />
@@ -20,6 +30,18 @@ export default function SideMenu() {
   );
 }
 
-function TagButton() {
-  return <button className="TagButton">Tag Button</button>;
+function TagButton({ title, children = "" }) {
+  console.log("title + children is: " + (title + children));
+  // Conditional rendering: show the tag buttons if and only if they have titles
+  if (title == null || title === "") {
+    return null; // this equals sending an empty div tags <div></div>
+  } else {
+    return (
+      <button className="TagButton">
+        <div style={{ fontSize: "15px" }}>{title}</div>
+        <br></br>
+        {children}
+      </button>
+    );
+  }
 }
