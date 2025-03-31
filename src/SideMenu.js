@@ -33,15 +33,17 @@ export default function SideMenu() {
 function TagButton({ title, children = "" }) {
   console.log("title + children is: " + (title + children));
   // Conditional rendering: show the tag buttons if and only if they have titles
-  if (title == null || title === "") {
-    return null; // this equals sending an empty div tags <div></div>
-  } else {
-    return (
-      <button className="TagButton">
-        <div style={{ fontSize: "15px" }}>{title}</div>
-        <br></br>
-        {children}
-      </button>
-    );
-  }
+  return (
+    <div>
+      {title == null || title === "" ? (
+        <div></div>
+      ) : (
+        <button className="TagButton">
+          <div style={{ fontSize: "15px" }}>{title}</div>
+          <br></br>
+          {children}
+        </button>
+      )}
+    </div>
+  );
 }
