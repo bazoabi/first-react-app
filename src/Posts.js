@@ -24,7 +24,7 @@ export default function Posts() {
 
   const postsRenderer = posts.map((post) => {
     return (
-      <Post title={post.title}>
+      <Post key={post.id} title={post.title}>
         <h2 style={post.bodyStyle}>{post.body}</h2>
       </Post>
     );
