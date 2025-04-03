@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./Header";
 import Posts from "./Posts";
 import SideMenu from "./SideMenu";
+import ChampSelectionInput from "./ChampSelectionInput";
 
 function App() {
   // return (
@@ -28,6 +29,7 @@ function App() {
     <div className="App">
       <Header />
       <Container />
+      <ChampSelectionInput />
     </div>
   );
 }
