@@ -62,11 +62,13 @@ export default function SideMenu() {
   //   </div>
   // );
 
+  console.log("the tagButtonsListRenderer is", tagButtonsListRenderer);
+
   return <div className="SideMenu">{tagButtonsListRenderer}</div>;
 }
 
 function TagButton({ title, children = "" }) {
-  console.log("title + children is: " + (title + children));
+  // console.log("title + children is: " + (title + children));
   // Conditional rendering: show the tag buttons if and only if they have titles
   return (
     <div>

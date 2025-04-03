@@ -97,3 +97,14 @@
 .TagButton:hover {
   background-color: rgb(57, 0, 57);
 }
+
+.ChampSelectionInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2vh;
+  /* background-color: orange; */
+  /* width: 100%; */
+  /* margin: auto 0; */
+}
