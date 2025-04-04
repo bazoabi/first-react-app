@@ -1,33 +1,35 @@
 import { useState } from "react";
 
 export default function MyForm() {
-  const [nameInput, setNameInput] = useState("");
-  const [emailInput, setEmailInput] = useState("");
+  //   const [nameInput, setNameInput] = useState("");
+  //   const [emailInput, setEmailInput] = useState("");
+
+  const [formInputs, setFormInputs] = useState({ name: "", email: "" });
 
   return (
     <form className="MyForm">
       <label>Name:</label>
       <input
         type="text"
-        value={nameInput}
+        value={formInputs.name}
         onChange={(event) => {
-          setNameInput(event.target.value);
+          setFormInputs({ ...formInputs, name: event.target.value });
         }}
       ></input>
 
       <label>Email:</label>
       <input
         type="text"
-        value={emailInput}
+        value={formInputs.email}
         onChange={(event) => {
-          setEmailInput(event.target.value);
+          setFormInputs({ ...formInputs, email: event.target.value });
         }}
       ></input>
 
       <button style={{ margin: "1vh" }}>Submit</button>
 
       <label>
-        Name is: {nameInput} , Email is: {emailInput}
+        Name is: {formInputs.name} , Email is: {formInputs.email}
       </label>
     </form>
   );
