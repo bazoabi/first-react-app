@@ -98,7 +98,7 @@
   background-color: rgb(57, 0, 57);
 }
 
-.ChampSelectionInput {
+.ChampSelectionInput, .MyForm {
   display: flex;
   justify-content: center;
   align-items: center;

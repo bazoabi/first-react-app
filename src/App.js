@@ -4,6 +4,7 @@ import Header from "./Header";
 import Posts from "./Posts";
 import SideMenu from "./SideMenu";
 import ChampSelectionInput from "./ChampSelectionInput";
+import MyForm from "./MyForm";
 
 function App() {
   // return (
@@ -29,7 +30,10 @@ function App() {
     <div className="App">
       <Header />
       <Container />
+      <hr></hr>
       <ChampSelectionInput />
+      <hr></hr>
+      <MyForm />
     </div>
   );
 }
