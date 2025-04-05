@@ -8,6 +8,8 @@ export default function MyForm() {
     name: "",
     email: "",
     age: "",
+    generalInfo: "",
+    isChecked: false,
   });
 
   const handleFormsInputsChange = (event) => {
@@ -18,8 +20,17 @@ export default function MyForm() {
     });
   };
 
+  const handleCheckboxChanged = (event) => {
+    setFormInputs({ ...formInputs, isChecked: event.target.checked });
+  };
+
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+    console.log(formInputs);
+  };
+
   return (
-    <form className="MyForm">
+    <form className="MyForm" onSubmit={handleOnSubmit}>
       <label>Name:</label>
       <input
         name="name"
@@ -48,6 +59,21 @@ export default function MyForm() {
         onChange={(event) => {
           handleFormsInputsChange(event);
         }}
+      ></input>
+
+      <label>Long Text Area:</label>
+      <textarea
+        value={formInputs.generalInfo}
+        onChange={(event) => {
+          setFormInputs({ ...formInputs, generalInfo: event.target.value });
+        }}
+      />
+
+      <label>Check?</label>
+      <input
+        type="checkbox"
+        checked={formInputs.isChecked}
+        onChange={handleCheckboxChanged}
       ></input>
 
       <button style={{ margin: "1vh" }}>Submit</button>
