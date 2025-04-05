@@ -10,10 +10,13 @@ export default function MyForm() {
     age: "",
     generalInfo: "",
     isChecked: false,
+    selectedOption: "",
+    radioButtonOptions: "",
   });
 
   const handleFormsInputsChange = (event) => {
     const { name, value } = event.target;
+    console.log("name is: ", name, " value is: ", value);
     setFormInputs({
       ...formInputs,
       [name]: value,
@@ -75,6 +78,52 @@ export default function MyForm() {
         checked={formInputs.isChecked}
         onChange={handleCheckboxChanged}
       ></input>
+
+      <label>Choose:</label>
+      <select
+        name="selectedOption"
+        value={formInputs.selectedOption}
+        onChange={handleFormsInputsChange}
+      >
+        <option value={"A"}>A</option>
+        <option value={"B"}>B</option>
+        <option value={"C"}>C</option>
+      </select>
+
+      <hr></hr>
+
+      <label>
+        <input
+          type="radio"
+          name="radioButtonOptions"
+          value="option1"
+          checked={formInputs.radioButtonOptions === "option1"}
+          onChange={handleFormsInputsChange}
+        />{" "}
+        Option 1
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="radioButtonOptions"
+          value="option2"
+          checked={formInputs.radioButtonOptions === "option2"}
+          onChange={handleFormsInputsChange}
+        />{" "}
+        Option 2
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="radioButtonOptions"
+          value="option3"
+          checked={formInputs.radioButtonOptions === "option3"}
+          onChange={handleFormsInputsChange}
+        />{" "}
+        Option 3
+      </label>
+
+      <hr></hr>
 
       <button style={{ margin: "1vh" }}>Submit</button>
 
